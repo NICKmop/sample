@@ -80,7 +80,7 @@ $(function(){
             $.ajax({
                 type: "post",
 //                type: "get",
-                url: "/index",
+                url: "/board",
                 data: {
                     ids : [1,2,3]
                 },

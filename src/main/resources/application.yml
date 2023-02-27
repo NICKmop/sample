@@ -7,8 +7,10 @@ spring:
     static-locations:
   #  DB연결
   datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    jdbcUrl: "jdbc:mariadb://localhost:3306/bix5Start?characterEncoding=UTF-8&serverTimezone=UTC"
+#    driver-class-name: org.mariadb.jdbc.Driver
+#    jdbcUrl: "jdbc:mariadb://localhost:3306/bix5Start?characterEncoding=UTF-8&serverTimezone=UTC"
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    jdbcUrl: jdbc:log4jdbc:mariadb://localhost:3306/bix5Start?characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: Abcd1234@
     hikari:
@@ -18,4 +20,5 @@ spring:
         maximum-pool-size: 50
         transaction-isolation: TRANSACTION_READ_UNCOMMITTED
         pool-name: pool-WorldWind
-
+logging:
+  config: classpath:logback/logback-default.xml

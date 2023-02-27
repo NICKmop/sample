@@ -6,13 +6,10 @@ import com.mybatis.sample.sample.configuration.http.BaseResponse;
 import com.mybatis.sample.sample.configuration.http.BaseResponseCode;
 import com.mybatis.sample.sample.domain.Board;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.thymeleaf.util.StringUtils;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Objects;
 
 @RestController
 @RequestMapping("/board")
@@ -24,10 +21,6 @@ public class SampleRestController {
     @PostMapping
 //    @GetMapping
     public BaseResponse<List<Board>> getList(@RequestParam(name = "ids[]", required = false) List<Integer> ids){
-//        return service.getList();
-//        model.addAttribute("dataList",ids.toString());
-//        model.addAttribute("dataList",service.getList());
-        System.out.println("ids = " + ids.getClass());
         System.out.println("ids = " + ids);
         return new BaseResponse(service.getList());
     }
