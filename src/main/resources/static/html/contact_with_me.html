@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zxx" xmlns="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact with me</title>
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/contact_with_me.css">
+</head>
+<body>
+    <section id="contact">
+        <div class="container">
+            <div class="title">
+                <h4>CONTACT WITH ME</h4>
+                <h2>Contact With Me</h2>
+            </div>
+        </div>
+        <div class="contact-me">
+            <div class="left">
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>phone</h3>
+                        <p>010-1234-1234</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>email</h3>
+                        <p>dlflsp153@gmail.com</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fa-solid fa-address-card"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>address</h3>
+                        <p>010010010010010010010</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <form action="#">
+                    <div class="form-group">
+                        <!-- label과 input은 같이 사영  -->
+                        <label for="name">name</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="form-group">
+                        <!-- label과 input은 같이 사영  -->
+                        <label for="email">email</label>
+                        <input type="text" id="email" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <!-- label과 input은 같이 사영  -->
+                        <label for="msg">message</label>
+                        <textarea id="msg" cols="30" rows="10"></textarea>
+                    </div>
+                    <button>send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

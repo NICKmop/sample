@@ -1,0 +1,21 @@
+spring:
+  # 운영서버 배포시에는 변경해야하는 부분
+  thymeleaf:
+    cache: false
+    prefix: file:src/main/resources/templates/
+  resources:
+    static-locations:
+  #  DB연결
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    jdbcUrl: "jdbc:mariadb://localhost:3306/bix5Start?characterEncoding=UTF-8&serverTimezone=UTC"
+    username: root
+    password: Abcd1234@
+    hikari:
+        auto-commit: false
+        connection-test-query: SELECT 1
+        minimum-idle: 10
+        maximum-pool-size: 50
+        transaction-isolation: TRANSACTION_READ_UNCOMMITTED
+        pool-name: pool-WorldWind
+
